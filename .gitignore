@@ -2,5 +2,7 @@
 .idea/
 
 a.out
-
+a.lib
+a.exp
+a.exe
 
