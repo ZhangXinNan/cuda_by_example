@@ -2,6 +2,15 @@
 # 3 CUDA C 简介
 ## 3.1 本章目标
 ## 3.2 第一个程序
+
+- `__global__` 告诉编译器，函数应该编译在设备而不是在主机上。
+- cudaMalloc()   分配内存
+- cudaFree()     释放内存
+- cudaMemcpy()   拷贝内容
+  - cudaMemcpyDeviceToHost
+  - cudaMemcpyHostToDevice
+  - cudaMemcpyDeviceToDevice
+
 ### 3.2.1 Hello, World!
 ```bash
 nvcc hello_world.cu
@@ -27,6 +36,11 @@ nvcc simple_kernel_params.cu
 ```
 
 ## 3.3 查询设备
+
+- cudaGetDeviceCount() 获取CUDA设备的数量
+- struct cudaDeviceProp 包含了设备属性信息的结构体
+- cudaGetDeviceProperties() 获取设备信息
+
 ```bash
 nvcc enum_gpu.cu
 ```
